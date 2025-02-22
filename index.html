@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Agency Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="background-effects">
+        <div class="floating-particles"></div>
+        <div class="gradient-overlay"></div>
+        <div class="animated-shapes"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">Sniper Media</a>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="الاحترافية-في-العمل-11-نصيحة-مهمة.jpg" alt="Digital Services 1" class="slide-image">
+                        <div class="slide-overlay">
+                            <h2 class="animated-title">أنت في المكان الصحيح لتطوير أعمالك</h2>
+                            <p class="animated-desc">سنأخذ بعملك من الصفر إلى الإحتراف</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="كيفية-عمل-خطة-تسويقية-.jpg" alt="Digital Services 2" class="slide-image">
+                        <div class="slide-overlay">
+                            <h2 class="animated-title">أقوى العروض للخطط التسويقية وإدارة وإنشاء الصفحات</h2>
+
+                            <p class="animated-desc"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="كيفية-عمل-خطة-تسويقية-ناجحة-خطوة-بخطوة.jpg" alt="Digital Services 3"
+                            class="slide-image">
+                        <div class="slide-overlay">
+                            <h2 class="animated-title">أفضل فريق للتصاميم والفيديوهات الإحترافية لنشاطك التجاري</h2>
+
+                            <p class="animated-desc">حلول تسويقية متكاملة لنمو أعمالك</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <style>
+            .hero {
+                height: 100vh;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .hero-slider {
+                width: 100%;
+                height: 100%;
+            }
+
+            .slide-content {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+            }
+
+            .slide-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: scale(1);
+                transition: transform 6s ease;
+            }
+
+            .swiper-slide-active .slide-image {
+                transform: scale(1.1);
+            }
+
+            .slide-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.8s ease;
+            }
+
+            .swiper-slide-active .slide-overlay {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .animated-title {
+                font-size: 4rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.8s ease 0.3s;
+            }
+
+            .animated-desc {
+                font-size: 1.8rem;
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.8s ease 0.5s;
+            }
+
+            .swiper-slide-active .animated-title,
+            .swiper-slide-active .animated-desc {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: white;
+                background: rgba(255, 255, 255, 0.2);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+
+            .swiper-button-next:hover,
+            .swiper-button-prev:hover {
+                background: rgba(255, 255, 255, 0.4);
+            }
+
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                font-size: 1.5rem;
+            }
+
+            .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+                background: white;
+                opacity: 0.5;
+                transition: all 0.3s ease;
+            }
+
+            .swiper-pagination-bullet-active {
+                opacity: 1;
+                width: 30px;
+                border-radius: 6px;
+            }
+
+            @media (max-width: 768px) {
+                .animated-title {
+                    font-size: 2.5rem;
+                }
+
+                .animated-desc {
+                    font-size: 1.2rem;
+                }
+            }
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" rel="stylesheet">
+
+        <script>
+            new Swiper('.hero-slider', {
+                loop: true,
+                speed: 1000,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                }
+            });
+        </script>
+    </section>
+    <section class="about-video-container">
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="container">
+                <div class="video-content">
+                    <div class="video-text">
+                        <h2 class="section-title" data-aos="fade-up">شاهد قصة نجاحنا</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">تعرف على رحلتنا في عالم
+                            التكنولوجيا والإبداع الرقمي</p>
+                    </div>
+                    <div class="video-wrapper" id="videoWrapper">
+                        <video id="mainVideo" class="video-player" poster="/api/placeholder/1920/1080">
+                            <source
+                                src="AQNT7Ctlve_6S_aNdFKitZYLFU9ocgrnFW0uxsw7M9y0r4JXlr8pwjlhtT04YRVuis-L-zy_af_zvB8PLHkYZqBZ.mp4"
+                                type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="play-button" id="playButton">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="video-overlay"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <style>
+                .video-section {
+                    padding: 6rem 0;
+                    position: relative;
+                    overflow: hidden;
+                    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+                }
+
+                .video-wrapper {
+                    position: relative;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                    transition: transform 0.3s ease;
+                    aspect-ratio: 16/9;
+                }
+
+                .video-player {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .play-button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80px;
+                    height: 80px;
+                    background: rgba(255, 255, 255, 0.2);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.3s ease;
+                    z-index: 2;
+                }
+
+                .play-button i {
+                    color: white;
+                    font-size: 2rem;
+                    margin-left: 5px;
+                }
+
+                .video-wrapper:hover .play-button {
+                    background: rgba(255, 255, 255, 0.3);
+                    transform: translate(-50%, -50%) scale(1.1);
+                }
+
+                .video-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+                    pointer-events: none;
+                    opacity: 1;
+                    transition: opacity 0.3s ease;
+                }
+
+                .video-wrapper.playing .video-overlay,
+                .video-wrapper.playing .play-button {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const videoWrapper = document.getElementById('videoWrapper');
+                    const video = document.getElementById('mainVideo');
+                    const playButton = document.getElementById('playButton');
+
+                    // Function to handle play/pause
+                    function toggleVideo() {
+                        if (video.paused) {
+                            video.play();
+                            videoWrapper.classList.add('playing');
+                        } else {
+                            video.pause();
+                            videoWrapper.classList.remove('playing');
+                        }
+                    }
+
+                    // Add click handlers
+                    playButton.addEventListener('click', toggleVideo);
+                    video.addEventListener('click', toggleVideo);
+
+                    // Handle video end
+                    video.addEventListener('ended', function () {
+                        videoWrapper.classList.remove('playing');
+                    });
+
+                    // Handle video pause
+                    video.addEventListener('pause', function () {
+                        videoWrapper.classList.remove('playing');
+                    });
+
+                    // Handle video play
+                    video.addEventListener('play', function () {
+                        videoWrapper.classList.add('playing');
+                    });
+                });
+            </script>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title" data-aos="fade-up">من نحن</h2>
+                        <div class="about-description" data-aos="fade-up" data-aos-delay="100">
+                            <p class="highlight-text">شركة سنايبر ميديا هو أولى الشركات على الإطلاق التي تقدم جميع
+                                الخدمات التي تحتاجها على المواقع التواصل الإجتماعي وأكثر.. كل ما تحتاجه من خدمات في مكان
+                                واحد، وموثوق من أكثر من +5000 عميل.. وفريقنا على خبرة عالية من الإحترافية في المجال بما
+                                يحمله من إختصاصات</p>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h3>رؤيتنا</h3>
+                                    <p>نسعى لأن نكون الشريك الأول في رحلة التحول الرقمي لعملائنا</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h3>مهمتنا</h3>
+                                    <p>تقديم حلول تقنية مبتكرة تساعد عملائنا على النمو والتطور</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-gem"></i>
+                                    </div>
+                                    <h3>قيمنا</h3>
+                                    <p>الابتكار، الجودة، الموثوقية، والتميز في خدمة العملاء</p>
+                                </div>
+                            </div>
+                            <br>
+                            <p class="highlight-text">تحت إشراف مستر حسام بسيوني
+                                <br>
+                                مؤسس الشركة
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .about-video-container {
+                background: var(--dark);
+                color: white;
+                font-family: 'Cairo', sans-serif;
+            }
+
+            .video-section,
+            .about-section {
+                padding: 6rem 0;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .video-section {
+                background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 1rem;
+            }
+
+            /* Video Styles */
+            .video-wrapper {
+                position: relative;
+                border-radius: 20px;
+                overflow: hidden;
+                cursor: pointer;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease;
+            }
+
+            .video-wrapper:hover {
+                transform: translateY(-10px);
+            }
+
+            .video-thumbnail {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80px;
+                height: 80px;
+                background: var(--primary);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+
+            .play-button i {
+                color: white;
+                font-size: 2rem;
+                margin-left: 5px;
+            }
+
+            .video-wrapper:hover .play-button {
+                background: var(--secondary);
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+
+            .video-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            }
+
+            .video-text {
+                text-align: center;
+                margin-top: 2rem;
+            }
+
+            /* About Styles */
+            .about-content {
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+                background: var(--gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .section-subtitle {
+                font-size: 1.5rem;
+                color: #888;
+                margin-bottom: 2rem;
+            }
+
+            .highlight-text {
+                font-size: 1.8rem;
+                color: var(--secondary);
+                margin-bottom: 3rem;
+                line-height: 1.6;
+            }
+
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .feature-item {
+                padding: 2rem;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 15px;
+                transition: transform 0.3s ease;
+            }
+
+            .feature-item:hover {
+                transform: translateY(-10px);
+            }
+
+            .feature-icon {
+                font-size: 2.5rem;
+                color: var(--primary);
+                margin-bottom: 1rem;
+            }
+
+            .feature-item h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: var(--secondary);
+            }
+
+            .feature-item p {
+                color: #888;
+                line-height: 1.6;
+            }
+
+            @media (max-width: 768px) {
+                .section-title {
+                    font-size: 2.5rem;
+                }
+
+                .highlight-text {
+                    font-size: 1.4rem;
+                }
+
+                .features-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .play-button {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        </style>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>إنشاء مواقع إلكترونية</h3>
+                    <p>🚀 امتلك موقعًا إلكترونيًا يعكس احترافية عملك، ويجذب العملاء بسهولة! 💻 اجعل مشروعك متاحًا 24/7، وزد من مصداقيتك وأرباحك. 🔥 لا تفوّت الفرصة، واجعل موقعك نقطة انطلاق نحو النجاح الرقمي!</p>
+                    <div class="card-shapes"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>تصميم هوية بصرية</h3>
+
+                    <p>🎨 اصنع هوية بصرية تُعبّر عن علامتك بلمسة احترافية ومميزة! ✨ الألوان، الشعار، والخطوط عناصر تصنع انطباعًا لا يُنسى. 🚀 اجعل علامتك تتحدث قبل أن تفعل!</p>
+                    <div class="card-shapes"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                    <h3>خدمات تعليق صوتي</h3>
+                    <p>🎙️ تعليق صوتي احترافي بأسلوب يجذب ويؤثر! ✨ نوفر أصواتًا متنوعة تناسب كل المجالات بجودة عالية. 🚀 اجعل صوت علامتك يُسمع ويُحفر في الأذهان!</p>
+                    <div class="card-shapes"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>خطط تسويقية وإعلانات ممولة </h3>
+                    <p>🚀 **خطط تسويقية ذكية وإعلانات ممولة تزيد من مبيعاتك!** 🎯 نوفر استراتيجيات مدروسة لتحقيق أفضل النتائج بأقل التكاليف. 📢 اجذب عملاءك المستهدفين وانطلق بعلامتك نحو النجاح!</p>
+                    <div class="card-shapes"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fa-brands fa-think-peaks"></i>
+                    </div>
+                    <h3>إنشاء وإدارة الصفحات</h3>
+
+                    <p>📱 **أنشئ صفحاتك وكن دائم الحضور!** 🚀 نوفر لك إدارة احترافية لصفحاتك، مع محتوى جذاب يعزز تفاعل جمهورك. 🎯 اجعل علامتك تنمو بقوة على جميع المنصات!</p>
+                    <div class="card-shapes"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="fade-up">
+                    <img src="/api/placeholder/600/400" alt="Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Modern online shopping experience</p>
+                        <a href="#" class="btn-outline">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/api/placeholder/600/400" alt="Project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Healthcare App</h3>
+                        <p>Patient management system</p>
+                        <a href="#" class="btn-outline">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/api/placeholder/600/400" alt="Project 3">
+                    <div class="portfolio-overlay">
+                        <h3>Educational Platform</h3>
+                        <p>Interactive learning system</p>
+                        <a href="#" class="btn-outline">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">آراء عملاؤنا الكرام </h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-image">
+                        <img src="Mlvwvxj-200x200.png" alt="Client 1">
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>مؤسسة الشمس للشحن والتخليص الجمركي</h3>
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>الله ينور عليكم إستمروا في الإبداع</p>
+
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-image">
+                        <img src="WJSvFLQ-200x200.png" alt="Client 2">
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>شركة المصراوية</h3>
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <p>أسعاركم ممتازة مقابل ما تقدمونه.. مستمرين مع بعض إن شاء الله</p>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-image">
+                        <img src="Pg50tbW-2000x2000.webp" alt="Client 3">
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>مؤسسة الشرق للحسابات</h3>
+
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>فريق مبدع بالإعلانات والتصاميم حاجة روعة وشركاء نجاح بالفعل
+                            وشكر خاص لمستر حسام
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="contact-section" dir="rtl">
+        <h2 class="contact-title">إتصل بنا</h2>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <p class="contact-subtitle">مستعدون للإجابة على كافة الأسئلة والمقترحات</p>
+
+                <div class="contact-details">
+                    <div class="address-block">
+                        <h3>عنواننا</h3>
+                        <p>مدينة نصر - القاهرة - مصر</p>
+                    </div>
+
+                    <div class="hours-block">
+                        <h3>ساعات العمل</h3>
+                        <p>يوميا 10:00 ص — 7:00 م</p>
+                        <p>وأون لاين على مدار الساعة</p>
+                    </div>
+
+                    <div class="contact-block">
+                        <h3>معلومات الاتصال</h3>
+                        <p dir="ltr">+20 111 327 7756</p>
+                        <p dir="ltr">snipermediacompany@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-button">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13814.675312246875!2d31.341654999999997!3d30.052137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e0130ab4dfb%3A0xb19c0847d24c93e4!2z2YXYr9mK2YbYqSDZhtis2LHYjCDZhdix2YPYsiDYp9mE2YXYr9mK2YbYqdiMINmF2K3Yp9mB2LjYqSDYp9mE2YLYp9mH2LHYqQ!5e0!3m2!1sar!2seg!4v1708636149540!5m2!1sar!2seg"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <style>
+            .contact-section {
+                background: var(--dark);
+                padding: 4rem 2rem;
+                color: white;
+                font-family: 'Cairo', 'Segoe UI', sans-serif;
+                text-align: right;
+            }
+
+            .contact-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .contact-title {
+                font-size: 3.5rem;
+                font-weight: bold;
+                margin-bottom: 2rem;
+                color: white;
+                text-align: center;
+            }
+
+            .contact-subtitle {
+                font-size: 1.5rem;
+                color: #ff6b6b;
+                margin-bottom: 3rem;
+            }
+
+            .contact-details {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .contact-details h3 {
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+                color: #6c63ff;
+            }
+
+            .contact-details p {
+                font-size: 1.2rem;
+                margin: 0.5rem 0;
+                color: #ffffff;
+            }
+
+            .map-container {
+                width: 100%;
+                height: 100%;
+                min-height: 450px;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .social-links {
+                display: flex;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .social-button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                transition: transform 0.3s ease;
+            }
+
+            .social-button:hover {
+                transform: translateY(-5px);
+            }
+
+            .social-button i {
+                font-size: 1.5rem;
+                color: var(--dark);
+            }
+
+            @media (max-width: 968px) {
+                .contact-container {
+                    grid-template-columns: 1fr;
+                }
+
+                .contact-title {
+                    font-size: 2.5rem;
+                }
+
+                .contact-subtitle {
+                    font-size: 1.2rem;
+                }
+
+                .contact-details h3 {
+                    font-size: 1.5rem;
+                }
+
+                .contact-details p {
+                    font-size: 1rem;
+                }
+
+                .map-container {
+                    min-height: 300px;
+                }
+            }
+        </style>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">Sniper Media</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sniper Media. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
